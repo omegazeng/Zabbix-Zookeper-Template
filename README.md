@@ -37,7 +37,7 @@
 
 ## Zabbix Configuration
 
-1) Copy `UserParameter_Zookeeper.conf` to `/etc/zabbix/zabbix_agentd.d` folder (or whatever is default and/or configured on your system).
+1) Copy `userparameter_zookeeper.conf` to `/etc/zabbix/zabbix_agentd.d` folder (or whatever is default and/or configured on your system).
 
 2) Restart your Zabbix Agent
 

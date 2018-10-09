@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-02-16T16:49:27Z</date>
+    <date>2018-10-09T05:50:26Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -32,7 +32,7 @@ UserParameter=echo2nc[*],echo $1 | nc $2 $3</description>
                     <snmp_community/>
                     <snmp_oid/>
                     <key>echo2nc[mntr,{$ZOO_IP},{$ZOO_PORT}]</key>
-                    <delay>5m</delay>
+                    <delay>1m</delay>
                     <history>90d</history>
                     <trends>0</trends>
                     <status>0</status>
@@ -1104,7 +1104,7 @@ UserParameter=echo2nc[*],echo $1 | nc $2 $3</description>
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template App Zookeeper:echo2nc[ruok,{$ZOO_IP},{$ZOO_PORT}].str(imok)}=0</expression>
+            <expression>{Template App Zookeeper:echo2nc[ruok,{$ZOO_IP},{$ZOO_PORT}].count(#2,&quot;imok&quot;,eq)}=0</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>zk - Node is not OK</name>
